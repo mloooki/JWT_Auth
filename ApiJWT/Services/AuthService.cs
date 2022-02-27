@@ -117,7 +117,8 @@ namespace ApiJWT.Services
                 issuer: _jwt.Issuer,
                 audience: _jwt.Audience,
                 claims: claims,
-                expires: DateTime.Now.AddDays(_jwt.DurationInDays));
+                expires: DateTime.Now.AddHours(_jwt.DurationInDays),
+                signingCredentials: signinCredentails);
 
             return jwtSecurityToken;
         }

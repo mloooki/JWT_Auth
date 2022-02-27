@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ApiJWT.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = UsersRoles.Admin)]
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase

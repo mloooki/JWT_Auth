@@ -46,7 +46,7 @@ namespace ApiJWT
 
             services.AddAuthentication(options => { //insted of defining this options in every contoller (inside [Authrorize]) we will define it here only.
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-               ///options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+               options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(o =>
             {
                 o.RequireHttpsMetadata = false;
